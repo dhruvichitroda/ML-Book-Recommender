@@ -3,13 +3,62 @@
 {% block content %}
 
 <!-- Hero Section -->
-<section class="hero-section text-center">
-    <div class="container animate-fade-up">
+<section class="hero-section text-center position-relative">
+    <div class="background-effects">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+    <div class="container animate-fade-up position-relative" style="z-index: 2;">
         <h1 class="hero-title">Discover Your Next <br><span class="text-accent">Favorite Book</span></h1>
         <p class="hero-subtitle mx-auto">
             Powered by Collaborative Filtering algorithms, our recommendation engine analyzes millions of data points to find the perfect read for you.
         </p>
-        <a href="/recommend" class="btn btn-cta btn-lg">Start Exploring</a>
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="/recommend" class="btn btn-cta btn-lg">Start Exploring</a>
+            <a href="#tech-stack" class="btn btn-outline-light btn-lg rounded-pill px-4">View Tech Stack</a>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack Section -->
+<section id="tech-stack" class="py-5 mb-5">
+    <div class="container">
+        <div class="row justify-content-center mb-4 animate-fade-up">
+            <div class="col-12 text-center">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2 rounded-pill">Engineering</span>
+                <h2 class="h3 fw-bold">Built With Modern Technologies</h2>
+            </div>
+        </div>
+        <div class="row g-4 justify-content-center animate-fade-up delay-1">
+            <div class="col-6 col-md-3">
+                <div class="tech-card text-center p-4">
+                    <i class="fab fa-python fa-3x mb-3 text-accent"></i>
+                    <h5 class="mb-0">Python</h5>
+                    <small class="text-muted">Core Logic</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tech-card text-center p-4">
+                    <i class="fas fa-flask fa-3x mb-3 text-white"></i>
+                    <h5 class="mb-0">Flask</h5>
+                    <small class="text-muted">Web Framework</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tech-card text-center p-4">
+                    <i class="fas fa-brain fa-3x mb-3 text-warning"></i>
+                    <h5 class="mb-0">Scikit-learn</h5>
+                    <small class="text-muted">Machine Learning</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="tech-card text-center p-4">
+                    <i class="fab fa-bootstrap fa-3x mb-3 text-info"></i>
+                    <h5 class="mb-0">Bootstrap 5</h5>
+                    <small class="text-muted">Responsive UI</small>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

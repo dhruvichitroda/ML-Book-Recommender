@@ -1,22 +1,32 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container" style="margin-top: 8rem;">
-    <div class="row justify-content-center animate-fade-up">
+<div class="container position-relative" style="margin-top: 8rem;">
+    <!-- Background Orbs for this page too -->
+    <div class="background-effects">
+        <div class="orb orb-1" style="left: 20%; top: -20%;"></div>
+        <div class="orb orb-2" style="right: 20%; bottom: -20%;"></div>
+    </div>
+
+    <div class="row justify-content-center animate-fade-up position-relative" style="z-index: 2;">
         <div class="col-lg-8 text-center">
             <h1 class="hero-title mb-3">Find Your <span class="text-accent">Match</span></h1>
-            <p class="text-secondary mb-5">Enter a book you love, and we'll suggest similar reads based on thousands of user reviews.</p>
+            <p class="text-secondary mb-5 lead">Enter a book you love, and we'll suggest similar reads based on thousands of user reviews.</p>
             
-            <div class="card p-2 border-0 shadow-lg" style="background: rgba(30, 41, 59, 0.8);">
+            <div class="card p-2 border-0 shadow-lg search-card" style="background: rgba(30, 41, 59, 0.8); backdrop-filter: blur(10px);">
                 <form action="/recommend_books" method="post" class="p-2">
                     <div class="input-group">
                         <span class="input-group-text bg-transparent border-0 ps-3">
                             <i class="fas fa-search text-secondary"></i>
                         </span>
-                        <input name="user_input" type="text" class="form-control border-0 bg-transparent shadow-none" placeholder="Search for a book (e.g. Harry Potter, 1984)..." required style="font-size: 1.1rem;">
-                        <button type="submit" class="btn btn-cta px-4 py-2 ms-2">Search</button>
+                        <input name="user_input" type="text" class="form-control border-0 bg-transparent shadow-none text-white" placeholder="Search for a book (e.g. Harry Potter, 1984)..." required style="font-size: 1.1rem; color: #fff !important;">
+                        <button type="submit" class="btn btn-cta px-4 py-2 ms-2 rounded-pill">Search</button>
                     </div>
                 </form>
+            </div>
+            
+            <div class="mt-4 text-muted small">
+                Try searching for: <span class="text-accent cursor-pointer">The Hobbit</span>, <span class="text-accent cursor-pointer">1984</span>, <span class="text-accent cursor-pointer">The Da Vinci Code</span>
             </div>
         </div>
     </div>
